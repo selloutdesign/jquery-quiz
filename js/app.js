@@ -12,13 +12,13 @@ $(document).ready(function() {
 
 	var questions = [
 		{text: "What is this an example of?",
-		image: "/quiz-app/images/placeholder.png",
+		image: "images/placeholder.png",
 		answers: ["ans1", "Correct", "ans3", "ans4"],
 		helper:"Description of the answer and Solution",
 		correctAnswer: "Correct"
 		},
 		{text: "What is jQuery",
-		image: "/quiz-app/images/placeholder.png",
+		image: "images/placeholder.png",
 		helper:"Description of the answer and Solution",
 		answers: ["ans1", "ans2", "ans3", "Correct"],
 		correctAnswer: "Correct"
@@ -93,7 +93,7 @@ $(document).ready(function() {
 
 	});
 
-	
+
 	// Check for end of game else display next question after reviewing answer
 	$("#next").click(function(){
 		if($(".current-question").text() == $(".total-questions").text()){
