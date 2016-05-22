@@ -1,0 +1,46 @@
+html,body{height:100%;}
+.app{
+	background-color: rgba(255, 255, 255, 0.68);
+}
+.content{
+  background: url(/quiz-app/images/bg.jpg) no-repeat top center fixed; 
+  overflow: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	text-align: center;
+	height: 100%;
+}	
+.content h1{
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 3em;
+	font-size: 3em;
+	font-weight: bold;
+
+}
+.content h3{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2em;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+#start,#submit{
+	margin-top: 2em;
+}
+#submit,#next,#new-game{
+	display: none;
+}
+
+ul{
+	list-style-type: none;
+}
+
+ul li{
+	margin-top: 1em;
+}
+
+.ui-selected { background: #F39814; color: white; }
