@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 	var questions = [
 		{text: "Which of the following will retrieve information from the object?",
-		image: "images/array-question.jpg",
+		image: "../images/array-question.jpg",
 		answers: ["user.1969;", "user[title/position]", "user['title/position']", "user.title/position;"],
 		helper:"Notice how some of the object keys here are in quotes. Simple key names do not have to be in quotes in JavaScript, but if you want a number or special character, you need to put the key in quotes. Also, you can see that numbers and special characters cannot be used with dot notation to access a property. The number 1969 can be accessed in bracket notation without quotes, but you may have noticed that title/position will only work if it's in quotes, due to the special character. Finally the name you saw in the previous example can be accessed with or without quotes, and it will give you the same response. You may be asking why you would need to use quotes in this case? Take a look at the following example that uses a variable to find a property in an object.",
 		correctAnswer: "user['title/position']"
