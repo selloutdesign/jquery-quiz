@@ -11,17 +11,23 @@ $(document).ready(function() {
 	var questionNumber = 0;
 
 	var questions = [
-		{text: "What is this an example of?",
-		image: "images/placeholder.png",
-		answers: ["ans1", "Correct", "ans3", "ans4"],
-		helper:"Description of the answer and Solution",
-		correctAnswer: "Correct"
+		{text: "Which of the following will retrieve information from the object?",
+		image: "images/array-question.jpg",
+		answers: ["user.1969;", "user[title/position]", "user['title/position']", "user.title/position;"],
+		helper:"Notice how some of the object keys here are in quotes. Simple key names do not have to be in quotes in JavaScript, but if you want a number or special character, you need to put the key in quotes. Also, you can see that numbers and special characters cannot be used with dot notation to access a property. The number 1969 can be accessed in bracket notation without quotes, but you may have noticed that title/position will only work if it's in quotes, due to the special character. Finally the name you saw in the previous example can be accessed with or without quotes, and it will give you the same response. You may be asking why you would need to use quotes in this case? Take a look at the following example that uses a variable to find a property in an object.",
+		correctAnswer: "user['title/position']"
 		},
-		{text: "What is jQuery",
-		image: "images/placeholder.png",
-		helper:"Description of the answer and Solution",
-		answers: ["ans1", "ans2", "ans3", "Correct"],
-		correctAnswer: "Correct"
+		{text: "What does DRY stand for when discussing programming best habits?",
+		image: "",
+		answers: ["Danger Recommended Yard", "Do Require Yourself", "Don't Repeat Yourself", "Don't Right Yourself"],
+		helper:"Do Not Repeat yourself!!! Write code that can be reused rather than solving the same problems over and over.",
+		correctAnswer: "Don't Repeat Yourself"
+		},
+		{text: "Why are Callback Functions important in Javascript?",
+		image: "",
+		helper:"JavaScript callback functions are wonderful and powerful to use and they provide great benefits to your web applications and code. You should use them when the need arises; look for ways to refactor your code for Abstraction, Maintainability, and Readability with callback functions. See you next time, and remember to keep coming back because JavaScriptIsSexy.com has much to teach you and you have much to learn.",
+		answers: ["For asynchronous execution (such as reading files, and making HTTP requests)", "In Event Listeners/Handlers", "In setTimeout and setInterval methods", "For Generalization: code conciseness", "All of the above"],
+		correctAnswer: "All of the above"
 		}
 	];
 
@@ -81,7 +87,8 @@ $(document).ready(function() {
 			questionNumber += 1;
 		}
 		else{
-			$(".info").text("Incorrect!")
+			$(".info").show();
+			$(".info").text("Incorrect!");
 			$(".info").append('</br>' + questions[questionNumber].helper)
 			$("#next").show('slow/400/fast', function() {
 				
